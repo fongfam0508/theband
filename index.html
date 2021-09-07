@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./assets/img/band/𝖺𝗂 𝗈𝗈𝗍𝗈.jpg" sizes="any" type="image/svg+xml">
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="./assets/font/themify-icons-font (1)/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css">
         <title>Shop Tickets Anime</title>
@@ -34,6 +35,9 @@
                 <!-- Begin: Search Icon -->
                 <div class="search-btn">
                     <i class="search-icon fas fa-search"></i>
+                </div>
+                <div id="mobie-menu" class="mobile-menu-btn">
+                    <i class="menu-icon fas fa-bars"></i>
                 </div>
                 <!-- End: Search Icon -->
             </div>
@@ -195,7 +199,10 @@
             const modal = document.querySelector('.modal')
             const modalContainer = document.querySelector('.js-modal-container')
             const modalClose = document.querySelector('.js-modal-close')
-
+            var header = document.getElementById('header');
+            var mobileMenu = document.getElementById('mobile-menu');
+            var headerHeight = header.clientHeight;
+            
             function showBuyTickets() {
                 modal.classList.add('open')
             }
@@ -215,6 +222,16 @@
             modalContainer.addEventListener('click', function (even){
                 event.stopPropagation()
             })
+
+            mobileMenu.onclick = function(){
+                var isClosed = header.clientHeight === headerHeight;
+                if (isClosed) {
+                    header.style.height = 'auto';
+                }
+                else {
+                    header.style.height = null;
+                }
+            }
         </script>
     </body>
 

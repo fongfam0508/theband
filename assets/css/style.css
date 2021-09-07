@@ -66,6 +66,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 
 #nav{
@@ -124,11 +125,13 @@ html {
     line-height: 38px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 20px;
 }
 
+#header .menu-icon,
 #header .search-icon{
     color: white;
     font-size: 15px;
@@ -138,6 +141,15 @@ html {
 #header .search-btn:hover{
     cursor: pointer;
     background-color: red;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+#header .menu-icon:hover{
+    color: black;
 }
 
 #slider {
@@ -446,12 +458,4 @@ html {
     to {
         opacity: 1;
     }
-}
-
-@media (min-width: 740px) and (max-width: 1023px) {
-    
-}
-
-@media (max-width: 739px){
-    
 }
