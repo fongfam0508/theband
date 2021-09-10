@@ -66,7 +66,6 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
 }
 
 #nav{
@@ -125,6 +124,13 @@ html {
     line-height: 38px;
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
 #header .mobile-menu-btn,
 #header .search-btn{
     float: right;
@@ -164,13 +170,13 @@ html {
     color: #fff;
     bottom: 0px;
     padding: 32px 16px;
-    left: 50%;
     left: 0;
     right: 0;
 }
 #slider .text-heading,
 #slider .text-description{
     margin: 15px 0;
+    text-shadow: 0 0 1px #000;
 }
 
 #content .content-section{
@@ -204,7 +210,7 @@ html {
 }
 
 #content .members-list{
-    margin: 48px 0;
+    margin: 32px 0;
 }
 
 #content .member-name{
@@ -254,7 +260,7 @@ html {
 }
 
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
     margin-left: -8px;
     margin-right: -8px;
     padding-bottom: 48px;
@@ -390,6 +396,14 @@ html {
 .contact-info{
     font-size: 18px;
     line-height: 1.5;
+}
+
+.contact-info a{
+    opacity: 0.6;
+}
+
+.contact-info a:hover{
+    opacity: 1;
 }
 
 .contact-info i[class*="fa-"] {
